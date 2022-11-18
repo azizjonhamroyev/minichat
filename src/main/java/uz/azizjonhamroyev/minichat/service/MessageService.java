@@ -1,6 +1,6 @@
 package uz.azizjonhamroyev.minichat.service;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import uz.azizjonhamroyev.minichat.entities.Message;
 import uz.azizjonhamroyev.minichat.repository.MessageRepository;
@@ -8,14 +8,10 @@ import uz.azizjonhamroyev.minichat.repository.MessageRepository;
 import java.util.List;
 
 @Service
+@AllArgsConstructor
 public class MessageService {
 
     private final MessageRepository messageRepository;
-
-    @Autowired
-    public MessageService(MessageRepository messageRepository) {
-        this.messageRepository = messageRepository;
-    }
 
     public List<Message> getMessages() {
         return messageRepository.findAll();
