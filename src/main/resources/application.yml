@@ -1,0 +1,29 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5423/minichat_db
+    username:
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+
+
+
+
+
+
+
+
+#spring:
+#  security:
+#    oauth2:
+#      client:
+#        registration:
+#          github:
+#            client-id: e99eb4e28c9c85054668
+#            client-secret: c96841c16029d2ded63497ccbc9bc6f6a4adf41c
