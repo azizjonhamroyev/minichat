@@ -8,7 +8,7 @@ import uz.azizjonhamroyev.minichat.service.UserService;
 import java.util.List;
 
 @RestController
-@RequestMapping(path = "students")
+@RequestMapping(path = "users")
 public class UserController {
 
     private final UserService userService;
