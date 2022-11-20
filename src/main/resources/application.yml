@@ -13,19 +13,10 @@ spring:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
         format_sql: true
-
-
-
-
-
-
-
-
-#spring:
-#  security:
-#    oauth2:
-#      client:
-#        registration:
-#          github:
-#            client-id: e99eb4e28c9c85054668
-#            client-secret: c96841c16029d2ded63497ccbc9bc6f6a4adf41c
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: 898265866051-e7bbonmegmbj0458ldetmg0ejo518pu7.apps.googleusercontent.com
+            client-secret: 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

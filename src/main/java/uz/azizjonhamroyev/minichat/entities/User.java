@@ -10,6 +10,7 @@ import javax.persistence.*;
 @Entity
 @Table(name = "users")
 public class User {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -20,8 +21,8 @@ public class User {
     @Column(columnDefinition = "TEXT")
     private String surname;
 
-    @Column(columnDefinition = "TEXT")
-    private String phone_number;
+    @Column(name = "phone_number", columnDefinition = "TEXT")
+    private String phoneNumber;
 
     @Column(columnDefinition = "TEXT")
     private String password;

@@ -8,7 +8,7 @@ import uz.azizjonhamroyev.minichat.service.MessageService;
 import java.util.List;
 
 @RestController
-@RequestMapping(path = "messages")
+@RequestMapping(path = "api/v1/messages")
 public class MessageController {
 
     private final MessageService messageService;
@@ -24,7 +24,7 @@ public class MessageController {
     }
 
     @PostMapping
-    public void registerMessage(@RequestBody Message message) {
+    public void saveMessage(@RequestBody Message message) {
         messageService.addMessage(message);
     }
 }
