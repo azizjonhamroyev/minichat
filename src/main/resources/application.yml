@@ -1,6 +1,12 @@
 server:
   port: 8080
 spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8083/auth/realms/baeldung
+          jwk-set-uri: http://localhost:8083/auth/realms/baeldung/protocol/openid-connect/certs
   datasource:
     url: jdbc:postgresql://localhost:5432/minichat
     username: postgres
@@ -13,10 +19,5 @@ spring:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
         format_sql: true
-  security:
-    oauth2:
-      client:
-        registration:
-          google:
-            client-id: 898265866051-e7bbonmegmbj0458ldetmg0ejo518pu7.apps.googleusercontent.com
-            client-secret: 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
+
+
